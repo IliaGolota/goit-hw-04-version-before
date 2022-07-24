@@ -218,6 +218,17 @@ body {
 /*section Hero*/
 .hero {
   background-color: var(--hero-footer-color);
+  background-image: url(../images/header.background.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: linear-gradient(
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url(../images/header.background.jpg);
+  max-width: 1600px;
+  height: 600px;
 }
 
 .container-hero {
