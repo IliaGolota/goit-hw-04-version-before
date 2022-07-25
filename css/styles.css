@@ -176,6 +176,7 @@ body {
   padding-left: 15px;
   padding-right: 15px;
   outline: 1px solid #000;
+  margin: 0 auto;
 }
 /*флекс контейнер*/
 .container-flex {
@@ -229,6 +230,7 @@ body {
     url(../images/header.background.jpg);
   max-width: 1600px;
   height: 600px;
+  margin: 0 auto;
 }
 
 .container-hero {
@@ -237,6 +239,7 @@ body {
   padding-bottom: 200px;
   /* outline: 1px tomato solid;*/
   text-align: center;
+  margin: 0 auto;
 }
 .hero-title {
   margin-bottom: 30px;
@@ -258,6 +261,35 @@ body {
 .flex-item {
   margin-right: 30px;
   /* outline: 1px solid black;*/
+}
+
+.flex-item::before {
+  display: block;
+  content: "";
+  width: 270px;
+  height: 120px;
+  /*outline: solid 1px red;*/
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: #f5f4fa;
+  margin-bottom: 30px;
+}
+
+.flex-item.icon-antenna::before {
+  background-image: url(../images/before/antenna.svg);
+}
+
+.flex-item.icon-clock::before {
+  background-image: url(../images/before/clock.svg);
+}
+
+.flex-item.icon-diagram::before {
+  background-image: url(../images/before/diagram.svg);
+}
+
+.flex-item.icon-astronaut::before {
+  background-image: url(../images/before/astronaut.svg);
 }
 
 .flex-item:last-child {
@@ -470,4 +502,45 @@ body {
   padding-bottom: 20px;
   border: 1px solid #eeeeee;
   border-top: none;
+}
+
+/* svg icons */
+.envelope {
+  height: 12px;
+  width: 16px;
+  color: var(--primary-text-color);
+}
+
+.phone {
+  width: 10px;
+  height: 16px;
+  color: var(--primary-text-color);
+}
+
+.envelope:hover,
+.phone:hover {
+  color: var(--accent-color);
+}
+
+.envelope .letter,
+.phone .letter {
+  fill: currentColor;
+}
+
+.actions {
+  display: flex;
+  padding: 0;
+  margin: 0;
+  outline: 1px solid black;
+  list-style: none;
+}
+
+.actions button {
+  background-image: url(../images/svg/Ellipse.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  padding: 0;
+  border: none;
+  width: 44px;
+  height: 44px;
 }
